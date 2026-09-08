@@ -1,13 +1,12 @@
-### 香 · MikkoAbudo
-
-```
+```sh
+kleelovelife@KleeLoveLife-PC:~$ fastfetch -l Arch
                   -`                   kleelovelife@KleeLoveLife-PC
                  .o+`                  ----------------------------
                 `ooo/                  OS: Arch Linux x86_64 (btw)
                `+oooo:                 Reality: Debian GNU/Linux 13 (trixie)
               `+oooooo:                Host: X99
               -+oooooo+:               Kernel: Linux 7.1.3
-            `/:-:++oooo+:              Uptime: 4 days, 12 hours, 33 mins
+            `/:-:++oooo+:              Uptime: 4 days, 12 hours, 35 mins
            `/++++/+++++++:             Packages: 3019 (dpkg), 5 (flatpak)
           `/++++++++++++++:            Shell: bash 5.2.37
          `/+++ooooooooooooo/`          Display (HDMI): 1920x1080 @ 120 Hz [External]
@@ -21,15 +20,20 @@
 `++:.                           `-/+/  Terminal: cursor
 .`                                 `/  CPU: 2 x Intel(R) Xeon(R) E5-2698B v3 (64) @ 3.40 GHz
                                        GPU: AMD Radeon Pro VII/Radeon Instinct MI50 32GB [Discrete]
-                                       Memory: 62.75 GiB / 220.26 GiB (28%)
+                                       Memory: 60.83 GiB / 220.26 GiB (28%)
                                        Swap: 2.55 GiB / 94.14 GiB (3%)
-                                       Disk (/): 463.66 GiB / 1.70 TiB (27%) - ext4
+                                       Disk (/): 463.69 GiB / 1.70 TiB (27%) - ext4
                                        Disk (/other): 152.26 GiB / 476.94 GiB (32%) - fuseblk
                                        Disk (/projectsDir): 99.00 GiB / 111.79 GiB (89%) - fuseblk
                                        Disk (/system32): 532.25 GiB / 953.07 GiB (56%) - fuseblk
                                        Locale: zh_CN.UTF-8
+kleelovelife@KleeLoveLife-PC:~$ cat /etc/os-release | head -n2
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+kleelovelife@KleeLoveLife-PC:~$ echo "I use Arch, btw."
+I use Arch, btw.
+kleelovelife@KleeLoveLife-PC:~$ # (lying)
+kleelovelife@KleeLoveLife-PC:~$ curl -sL zqat.asia >/dev/null && echo ok
+ok
+kleelovelife@KleeLoveLife-PC:~$ _
 ```
-
-I use Arch, btw. (running Debian)
-
-[zqat.asia](https://zqat.asia)
