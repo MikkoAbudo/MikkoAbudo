@@ -27,13 +27,11 @@ kleelovelife@KleeLoveLife-PC:~$ fastfetch -l Arch
                                        Disk (/projectsDir): 99.00 GiB / 111.79 GiB (89%) - fuseblk
                                        Disk (/system32): 532.25 GiB / 953.07 GiB (56%) - fuseblk
                                        Locale: zh_CN.UTF-8
-kleelovelife@KleeLoveLife-PC:~$ cat /etc/os-release | head -n2
-NAME="Debian GNU/Linux"
-VERSION_ID="13"
-kleelovelife@KleeLoveLife-PC:~$ echo "I use Arch, btw."
-I use Arch, btw.
-kleelovelife@KleeLoveLife-PC:~$ # (lying)
-kleelovelife@KleeLoveLife-PC:~$ curl -sL zqat.asia >/dev/null && echo ok
-ok
+kleelovelife@KleeLoveLife-PC:~$ grep ^ID= /etc/os-release
+ID=debian
+kleelovelife@KleeLoveLife-PC:~$ pacman -Q | wc -l
+bash: pacman: command not found
+kleelovelife@KleeLoveLife-PC:~$ # whatever
+kleelovelife@KleeLoveLife-PC:~$ open https://zqat.asia
 kleelovelife@KleeLoveLife-PC:~$ _
 ```
