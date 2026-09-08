@@ -11,7 +11,7 @@
            `/++++/+++++++:             Shell: bash 5.2.37
           `/++++++++++++++:            DE: GNOME 48.7
          `/+++ooooooooooooo/`          WM: Mutter (Wayland)
-        ./ooosssso++osssssso+`         Terminal: cursor
+        ./ooosssso++osssssso+`         Terminal: GNOME Terminal 3.56.2
        .oossssso-````/ossssss+`        CPU: 2 x Intel(R) Xeon(R) E5-2698B v3 (64) @ 3.40 GHz
       -osssssso.      :ssssssso.       GPU: AMD Radeon Pro VII/Radeon Instinct MI50 32GB [Discrete]
      :osssssss/        osssso+++.      Memory: 60.51 GiB / 220.26 GiB (27%)
