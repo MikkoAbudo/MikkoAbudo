@@ -1,29 +1,38 @@
-name: Update uptime
+name: Refresh profile SVG
 
 on:
   schedule:
-    # GitHub cron is UTC; every 20 minutes keeps the counter feeling alive.
     - cron: "*/20 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/render-profile.py"
+      - ".profile/**"
+      - ".github/workflows/update-uptime.yml"
 
 permissions:
   contents: write
 
+concurrency:
+  group: profile-svg
+  cancel-in-progress: true
+
 jobs:
-  tick:
+  render:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Refresh Uptime line
-        run: python3 .profile/update_uptime.py
+      - name: Render profile SVGs
+        run: python3 scripts/render-profile.py
       - name: Commit if changed
         run: |
-          if git diff --quiet README.md; then
-            echo "no change"
+          if git diff --quiet -- assets/profile-light.svg assets/profile-dark.svg; then
+            echo "already current"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "chore: tick profile uptime"
+          git add assets/profile-light.svg assets/profile-dark.svg
+          git commit -m "chore: refresh profile svg"
           git push
