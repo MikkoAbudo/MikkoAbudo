@@ -6,7 +6,7 @@
                 `ooo/                  OS: Debian GNU/Linux 13 (trixie) x86_64
                `+oooo:                 Host: X99
               `+oooooo:                Kernel: Linux 7.1.3
-              -+oooooo+:               Uptime: 4 days, 12 hours, 37 mins
+              -+oooooo+:               Uptime: 4 days, 12 hours, 38 mins
             `/:-:++oooo+:              Packages: 3019 (dpkg), 5 (flatpak)
            `/++++/+++++++:             Shell: bash 5.2.37
           `/++++++++++++++:            DE: GNOME 48.7

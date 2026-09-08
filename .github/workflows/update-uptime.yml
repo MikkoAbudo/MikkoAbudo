@@ -1,0 +1,29 @@
+name: Update uptime
+
+on:
+  schedule:
+    # GitHub cron is UTC; every 20 minutes keeps the counter feeling alive.
+    - cron: "*/20 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refresh Uptime line
+        run: python3 .profile/update_uptime.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet README.md; then
+            echo "no change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: tick profile uptime"
+          git push
